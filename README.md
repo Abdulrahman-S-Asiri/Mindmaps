@@ -1,108 +1,190 @@
-# 🧠 موسوعة الخرائط الذهنية | Mindmaps Encyclopedia
-
 <div align="center">
 
-**19 خريطة ذهنية تفاعلية تغطي أعمق المعارف البشرية**
+# 💎 موسوعة الخرائط الذهنية | Mindmaps Encyclopedia 💎
 
-**19 Interactive Mindmaps Covering the Deepest Human Knowledge**
+**30 خريطة ذهنية تفاعلية تغطي أعمق المعارف البشرية**
 
-[![Mindmaps](https://img.shields.io/badge/Mindmaps-19-brightgreen)](.)
-[![Knowledge Items](https://img.shields.io/badge/Knowledge_Items-1000+-blue)](.)
-[![Fields](https://img.shields.io/badge/Fields-10-purple)](.)
-[![Made with](https://img.shields.io/badge/Made_with-Python-yellow)](.)
+*30 Interactive Mindmaps Covering the Deepest Human Knowledge*
+
+<br>
+
+[![Mindmaps](https://img.shields.io/badge/Mindmaps-30-00E676?style=for-the-badge&logo=mindmap&logoColor=white)](.)
+[![Knowledge Nodes](https://img.shields.io/badge/Knowledge_Nodes-2000+-00BCD4?style=for-the-badge&logo=data&logoColor=white)](.)
+[![Fields](https://img.shields.io/badge/Categories-6-FF6D00?style=for-the-badge&logo=target&logoColor=white)](.)
+[![Made with](https://img.shields.io/badge/Made_with-Python_&_Pyecharts-FFD600?style=for-the-badge&logo=python&logoColor=black)](.)
+
+<br>
+
+> *"المعرفة هي القوة، وتصوير المعرفة هو مفتاح الحكمة."*
+> 
+> *"Knowledge is power, and visualizing knowledge is the key to wisdom."*
 
 </div>
 
 ---
 
-## 📖 عن المشروع | About
+## 🌟 الرؤية والمشروع | Project Vision
 
-موسوعة تفاعلية من الخرائط الذهنية مبنية بـ Python و Pyecharts، تغطي مجالات متنوعة من العلوم والتكنولوجيا إلى الفلسفة والتاريخ. كل خريطة مصممة بتفاصيل عميقة وألوان فريدة وتصميم احترافي.
+موسوعة تفاعلية فاخرة من الخرائط الذهنية، مبنية بأحدث تقنيات **Python** و **Pyecharts**، لتجسد مجالات متنوعة من العلوم، التكنولوجيا، الفلسفة، والاقتصاد بطريقة بصرية لم يسبق لها مثيل. كل خريطة مصممة بعناية فائقة، بتفاصيل عميقة، ألوان متناسقة، وتقسيمات هندسية تساهم في تسريع الفهم والاستيعاب.
 
-An interactive encyclopedia of mindmaps built with Python & Pyecharts, covering diverse fields from science and technology to philosophy and history. Each map features deep detail, unique color themes, and professional design.
+An interactive, high-end encyclopedia of mindmaps built with **Python & Pyecharts**, illustrating diverse fields from science and technology to philosophy and economics in an unprecedented visual manner. Each map is crafted with immense detail, harmonious color palettes, and structured layouts to accelerate learning and comprehension.
 
-## 🗂️ الخرائط | Maps
+---
 
-| # | الخريطة | المجال | اللون |
-|---|---------|--------|-------|
-| 1 | ⚖️ الحقيقة المطلقة | فلسفة | 🟡 ذهبي |
-| 2 | 🤖 منظومة الذكاء الاصطناعي | تقنية | 🟢 سماوي |
-| 3 | 🌌 أعماق الذكاء الاصطناعي | تقنية | 🩷 وردي |
-| 4 | 🩸 الماتريكس وحقائق العصر | اقتصاد | 🔴 أحمر |
-| 5 | 🧠 علم النفس البشري | علوم | 🟢 زمردي |
-| 6 | 💰 الاقتصاد الحقيقي | اقتصاد | 🟡 كهرماني |
-| 7 | 🏛️ تاريخ الحضارات | تاريخ | 🟤 بني |
-| 8 | 💊 الصحة والجسد | صحة | 🔵 أزرق |
-| 9 | 📖 فلسفة التعلم | علوم | 🟣 بنفسجي |
-| 10 | 🔐 الأمن السيبراني | تقنية | ⚫ هاكر |
-| 11 | 🚀 ريادة الأعمال | اقتصاد | 🟠 برتقالي |
-| 12 | 🌌 علوم الكون والفضاء | علوم | 🔵 كحلي |
-| 13 | ⚛️ الفيزياء الكمية | علوم | 🟣 ماجنتا |
-| 14 | 🏺 الفلسفة العميقة | فلسفة | ⚪ فضي |
-| 15 | 💻 البرمجة من الصفر | تقنية | 🟢 تيل |
-| 16 | ⚔️ التاريخ الحديث | تاريخ | 🔴 قرمزي |
-| 17 | 👥 علم الاجتماع | علوم | 🟠 سلموني |
-| 18 | 🌍 الجيوسياسة العالمية | تاريخ | ⚫ فولاذي |
-| 19 | 🧬 علم الأحياء | علوم | 🟢 ليموني |
+## 🗂️ الخرائط الذهنية | The 30 Masterpieces
 
-## 🚀 التشغيل | Getting Started
+تم تصنيف الخرائط إلى 6 أقسام رئيسية لتسهيل الوصول والتصفح:
 
-### المتطلبات
+<details>
+<summary><b>🤖 التقنية والذكاء الاصطناعي | Tech & AI</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| 🧠 **منظومة الذكاء الاصطناعي** | أعماق وتفرعات الذكاء الاصطناعي | � تيل |
+| 🚀 **خارطة طريق الذكاء الاصطناعي** | المسار الشامل لتعلم الـ AI | 🩷 ماجنتا |
+| 💻 **البرمجة من الصفر** | خريطة الطريق الذهبية للمبرمجين | � سماوي |
+| 🔐 **الأمن السيبراني** | الدفاع والهجوم والعالم الرقمي المتخفي | ⚫ هاكر |
+
+</details>
+
+<details>
+<summary><b>🌌 العلوم والرياضيات | Science & Math</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| ⚛️ **الفيزياء الكمية** | العالم العجيب لميكانيكا الكم | � بنفسجي |
+| 🔭 **علوم الكون والفضاء** | من المجموعة الشمسية لأطراف الكون | 🌌 ليلي |
+| 🧬 **علم الأحياء** | تركيبة الحياة والجينات | 🟢 زمردي |
+| ➗ **الرياضيات** | ملكة العلوم وأساس المنطق | 🔵 أزرق |
+| ⚡ **الطاقة والمناخ** | مستقبل الأرض وتحديات المناخ | 🟡 شمسي |
+| 🩺 **الصحة والجسد** | أسرار الطب والجسد البشري | 🔴 دموي |
+
+</details>
+
+<details>
+<summary><b>⚖️ الفلسفة وعلم النفس | Philosophy & Psychology</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| � **الحقيقة المطلقة** | رحلة الوعي الكبرى | � ذهبي |
+| 🏺 **الفلسفة العميقة** | من سقراط إلى سارتر | ⚪ فضي |
+| 🧠 **علم النفس البشري** | أسرار النفس البشرية | 🟢 عشبي |
+| � **فلسفة التعلم الحقيقي** | كيف يكتسب الدماغ المعرفة | 🟣 أرجواني |
+| 🗣️ **فن التأثير والإقناع** | سيكولوجية الجماهير والإقناع | 🟤 كاكاو |
+| 🎨 **الفن والإبداع** | الجمال المطلق والخيال | � يوسفي |
+| 🕋 **الأديان والعقائد** | فهم المعتقدات الكبرى | � برونزي |
+
+</details>
+
+<details>
+<summary><b>💰 الاقتصاد والأعمال | Economy & Business</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| 💵 **الاقتصاد الحقيقي** | الماكرو والمايكرو والأنظمة النقدية | � ذهبي |
+| 🏗️ **ريادة الأعمال** | من الصفر حتى الإدراج (IPO) | 🟠 برتقالي |
+| 📈 **المالية الشخصية** | إدارة الثروات والحرية المالية | � أخضر |
+| � **الغذاء والزراعة** | إطعام 8 مليار إنسان | 🌿 زيتي |
+
+</details>
+
+<details>
+<summary><b>🏛️ التاريخ، المجتمع، والسياسة | History, Society & Politics</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| 🏺 **تاريخ الحضارات** | نهوض وسقوط الإمبراطوريات | � طيني |
+| ⚔️ **التاريخ الحديث** | من الحروب العالمية لدول اليوم | 🔴 قرمزي |
+| 👥 **علم الاجتماع** | التفاعلات، الطبقات، والسلوك البشري | 🟠 سلموني |
+| 🌍 **الجيوسياسة العالمية** | القوة، التحالفات، والنظام العالمي | ⚫ فولاذي |
+| ⚖️ **القانون والحقوق** | العدالة، التشريع، وسيادة القانون | � نيلي |
+| �️ **اللغات والتواصل** | قوة الكلمات وتطور اللغات | 🟢 فيروزي |
+
+</details>
+
+<details>
+<summary><b>🩸 الحقائق الخفية | Hidden Realities</b></summary>
+
+<br>
+
+| الخريطة | الوصف | اللون |
+|---------|-------|-------|
+| 🎭 **حقائق العصر المبطنة** | كشف أوهام المال والبيانات والهيمنة | 🔴 أحمر |
+| 📺 **الإعلام والبروباغندا** | صناعة الرأي العام والتحكم | 🩷 وردي |
+| 🕸️ **تحليل المؤامرات** | التفكير النقدي خلف الأحداث الكبرى | ⚫ أسود |
+
+</details>
+
+---
+
+## ✨ المميزات الفاخرة | Premium Features
+
+<table align="center">
+  <tr>
+    <td align="center">🔍<br><b>بحث فوري وعميق</b><br>محرك بحث داخلي عبر الـ 30 خريطة مدمج في الواجهة الجديدة</td>
+    <td align="center">🎨<br><b>30 تصميم لوني فريد</b><br>كل خريطة تملك روحها وثيمها اللوني الخاص الذي يعكس محتواها</td>
+    <td align="center">📚<br><b>مرجعية موثقة</b><br>عقدة "المراجع" لكل خريطة تضمن الدقة والموثوقية العلمية</td>
+  </tr>
+  <tr>
+    <td align="center">📱<br><b>تصميم متجاوب</b><br>واجهة Portal تعمل بسلاسة على كافة أحجام الشاشات</td>
+    <td align="center">💾<br><b>تصدير عالي الجودة</b><br>إمكانية حفظ أي خريطة بصيغة صورة بدقة فائقة للطباعة</td>
+    <td align="center">🖱️<br><b>تفاعل حر</b><br>زووم، تنقل بالسحب، طي وتوسيع العقد بكبسة زر</td>
+  </tr>
+</table>
+
+---
+
+## 🚀 رحلة التشغيل | Quick Start
+
+<div align="center">
+  <b>بضغطة زر واحدة.. يمكنك توليد الموسوعة كاملة.</b>
+</div>
+
 ```bash
+# 1. تثبيت المتطلبات الأساسية
 pip install pyecharts
-```
 
-### التشغيل
-```bash
-# توليد جميع الخرائط وفتح البوابة
+# 2. توليد كافة الـ 30 خريطة ذهنية وفتح البوابة المحورية
 start.bat
 
-# أو يدوياً
-python src/truth_mindmap.py
-# ثم افتح public/index.html
+# 3. الاستمتاع بالمعرفة!
 ```
 
-## 📁 هيكل المشروع | Structure
+---
 
-```
+## 📁 الهيكلية الهندسية | Architecture
+
+تعتمد الموسوعة على بنية نظيفة ومقسمة بعناية:
+
+```bash
 Mindmaps/
-├── src/                    # 19 Python generation scripts
+├── src/                    # 💎 30 Python Scripts (The Core Engines)
 │   ├── truth_mindmap.py
-│   ├── ai_ecosystem_mindmap.py
-│   ├── learn_ai_mindmap.py
-│   ├── modern_realities_mindmap.py
-│   ├── psychology_mindmap.py
-│   ├── economy_mindmap.py
-│   ├── civilizations_mindmap.py
-│   ├── health_mindmap.py
-│   ├── learning_philosophy_mindmap.py
-│   ├── cybersecurity_mindmap.py
-│   ├── entrepreneurship_mindmap.py
-│   ├── space_mindmap.py
 │   ├── quantum_physics_mindmap.py
-│   ├── philosophy_mindmap.py
-│   ├── programming_mindmap.py
-│   ├── modern_history_mindmap.py
-│   ├── sociology_mindmap.py
-│   ├── geopolitics_mindmap.py
-│   └── biology_mindmap.py
-├── public/                 # Generated HTML files + Portal
-│   ├── index.html          # Main portal with search & filters
-│   └── *.html              # 19 interactive mindmap files
-├── start.bat               # One-click generator
-└── README.md
+│   └── ... (28 MORE MAPS)
+├── public/                 # 🌌 Output Portal
+│   ├── index.html          # Main interactive hub with search
+│   └── *.html              # The 30 generated HD HTML maps
+├── start.bat               # 🚀 Master Execution Script
+└── README.md               # 📖 (You are here)
 ```
 
-## ✨ الميزات | Features
+<br>
 
-- 🔍 **بحث مباشر** في جميع الخرائط
-- 🏷️ **فلاتر بالتصنيف** (علوم، تقنية، فلسفة، اقتصاد، تاريخ، صحة)
-- 📊 **إحصائيات** تلقائية
-- 🎨 **19 ثيم لوني** فريد
-- 📱 **تصميم متجاوب** يعمل على جميع الشاشات
-- 💾 **تصدير PNG** من كل خريطة
-- 🖱️ **تفاعل كامل**: تكبير، تصغير، سحب
+<div align="center">
+  
+**صُنع بشغف للمعرفة 🤍 Built with Passion for Knowledge**
 
-## 📄 License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-MIT License
+</div>
