@@ -25,7 +25,8 @@ modern_history_map = {
         "11 سبتمبر وما بعده\n9/11 & Aftermath": ["هجمات 11 سبتمبر 2001", "الحرب على الإرهاب (War on Terror)", "غزو أفغانستان 2001 والعراق 2003", "صعود داعش (ISIS 2014)"],
         "الأزمات الاقتصادية\nEconomic Crises": ["أزمة 2008 المالية العالمية", "أزمة الديون الأوروبية 2010", "جائحة كوفيد-19 وأثرها الاقتصادي 2020", "التضخم العالمي 2022-2023"],
         "تحولات جيوسياسية\nGeopolitical Shifts": ["صعود الصين كقوة عظمى", "الحرب الروسية الأوكرانية 2022", "BRICS مقابل G7", "التنافس التكنولوجي الأمريكي-الصيني"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Eric Hobsbawm - Age of Extremes (1994)", "John Keegan - The First World War (1998)", "Antony Beevor - The Second World War (2012)", "Gaddis - The Cold War (2005)"]
 }
 
 def dict_to_tree(name, data, depth=0):

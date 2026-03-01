@@ -38,7 +38,8 @@ health_map = {
         },
         "الطب التكاملي\nIntegrative Medicine": ["الأعشاب الطبية المثبتة علمياً (الكركم، الزنجبيل)", "الوخز بالإبر - فعال للألم المزمن", "التأمل واليوغا - مثبت علمياً للقلق", "الحمية كدواء (Food as Medicine)"],
         "الصحة الرقمية\nDigital Health": ["الأجهزة القابلة للارتداء (Apple Watch, Oura Ring)", "التطبيب عن بُعد (Telemedicine)", "AI في التشخيص - دقة 94% في سرطان الجلد", "السجلات الصحية الرقمية (EHR)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Matthew Walker - Why We Sleep (2017)", "Peter Attia - Outlive (2023)", "Andrew Huberman - Huberman Lab Podcast", "WHO World Health Statistics"]
 }
 
 def dict_to_tree(name, data, depth=0):

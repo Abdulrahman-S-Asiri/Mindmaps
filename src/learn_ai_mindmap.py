@@ -41,7 +41,8 @@ learn_ai_map = {
         "الوهم مقابل الواقع\nHype vs Reality": ["الذكاء الاصطناعي مجرد إحصاء مركب (It is Math, not Consciousness)", "الخوارزميات غبية بدون بيانات (GIGO)", "محدودية الاستدلال الحقيقي (Lack of Genuine Reasoning)"],
         "هيمنة البنية التحتية\nThe Hardware Monopoly": ["احتكار الشركات لشرائح العتاد (Nvidia GPU Monopoly)", "التكلفة الباهظة جداً للتدريب (Astronomical Training Costs)", "التأثير البيئي واستهلاك الطاقة (Massive Power Consumption)"],
         "تحديات خطيرة\nCritical Challenges": ["مشكلة الصندوق الأسود (The Black Box & Interpretability)", "التحيز المعرفي الموروث من البيانات (Data Bias & Fairness)", "التشفير والأمان (Security Vulnerabilities)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Andrew Ng - Machine Learning (Coursera)", "Ian Goodfellow - Deep Learning (2016)", "fast.ai - Practical Deep Learning", "Andrej Karpathy - Neural Networks", "Yann LeCun - Deep Learning (Nature 2015)"]
 }
 
 # ─── 2. Rich Professional Styling by Depth ─────────────────────

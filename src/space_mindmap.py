@@ -58,7 +58,8 @@ space_map = {
             "المريخ\nMars": ["رحلة 7 أشهر (7-month Journey)", "تحديات: إشعاع، جاذبية منخفضة، عزلة", "Terraform - تحويل المريخ لكوكب صالح للحياة"],
             "ما وراء المريخ\nBeyond Mars": ["أقمار المشتري: يوروبا (محيط تحت الجليد)", "تيتان قمر زحل (بحيرات ميثان)", "مسبار بين نجمي: Breakthrough Starshot", "تلسكوب جيمس ويب JWST - النظر لبدايات الكون"]
         }
-    }
+    },
+    "📚 المراجع\nReferences": ["Carl Sagan - Cosmos (1980)", "Stephen Hawking - A Brief History of Time (1988)", "NASA JPL Data", "Neil deGrasse Tyson - Astrophysics for People in a Hurry (2017)"]
 }
 
 def dict_to_tree(name, data, depth=0):

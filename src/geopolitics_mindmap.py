@@ -29,7 +29,8 @@ geopolitics_map = {
     "4. مستقبل النظام العالمي\nFuture World Order": {
         "سيناريوهات\nScenarios": ["عالم متعدد الأقطاب (Multipolar World)", "فخ ثيوسيديدس - حرب بين الصاعد والمهيمن", "حكومة عالمية (World Government - Unlikely)", "فوضى وتشرذم (Fragmentation)"],
         "تحديات عالمية\nGlobal Challenges": ["تغير المناخ (Climate Change)", "الذكاء الاصطناعي كسلاح (AI as Weapon)", "الأوبئة المستقبلية (Future Pandemics)", "أزمة المياه والغذاء (Water & Food Crisis)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Henry Kissinger - World Order (2014)", "Brzezinski - The Grand Chessboard (1997)", "Graham Allison - Destined for War (2017)", "Peter Zeihan - End of the World (2022)"]
 }
 
 def dict_to_tree(name, data, depth=0):

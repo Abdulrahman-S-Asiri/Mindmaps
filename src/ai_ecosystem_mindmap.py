@@ -37,7 +37,8 @@ ai_ecosystem = {
         "GPUs (وحدات التجزئة الرسومية)": ["Nvidia H100 Hopper", "Nvidia B200 Blackwell", "AMD MI300X"],
         "Custom ASIC (مسرعات مخصصة)": ["Google TPU v5", "AWS Trainium / Inferentia", "Azure Maia"],
         "Cloud Providers (الموفرون السحابيون)": ["AWS", "Microsoft Azure", "Google Cloud (GCP)", "CoreWeave"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Stanford AI Index Report (Annual)", "McKinsey Global AI Survey", "OpenAI Research Papers", "Google DeepMind Publications", "MIT Technology Review"]
 }
 
 # ─── 2. Rich Professional Styling by Depth ─────────────────────

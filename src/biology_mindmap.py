@@ -34,7 +34,8 @@ biology_map = {
             "المناعة\nImmune System": ["المناعة الفطرية (Innate Immunity)", "المناعة التكيفية (Adaptive Immunity)", "الأجسام المضادة (Antibodies)", "اللقاحات - كيف تعمل (Vaccines)"]
         },
         "الميكروبيوم\nMicrobiome": ["39 تريليون ميكروب في جسمك", "أكثر من عدد خلاياك البشرية!", "تأثير على المزاج والمناعة والوزن", "محور الأمعاء-الدماغ (Gut-Brain Axis)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Darwin - On the Origin of Species (1859)", "James Watson - The Double Helix (1968)", "Richard Dawkins - The Selfish Gene (1976)", "Siddhartha Mukherjee - The Gene (2016)"]
 }
 
 def dict_to_tree(name, data, depth=0):

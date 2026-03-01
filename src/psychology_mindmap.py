@@ -70,7 +70,8 @@ psychology_map = {
             "علاجات أخرى\nOther Therapies": ["العلاج بالتقبل والالتزام ACT", "العلاج الجدلي السلوكي DBT", "EMDR - إزالة حساسية حركة العين", "العلاج النفسي الديناميكي (Psychodynamic)"]
         },
         "وصمة المرض النفسي\nMental Health Stigma": ["المرض النفسي ليس ضعفاً (Not a Weakness)", "1 من كل 4 أشخاص يتأثر (1 in 4 People Affected)", "العلاج فعال ومتاح (Treatment Works)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Freud - Interpretation of Dreams (1899)", "Carl Jung - Man and His Symbols (1964)", "Daniel Goleman - Emotional Intelligence (1995)", "DSM-5 (APA 2013)"]
 }
 
 def dict_to_tree(name, data, depth=0):

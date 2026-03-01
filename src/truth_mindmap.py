@@ -42,7 +42,8 @@ absolute_truth_map = {
     "5. ثمار الوصول\nThe Fruits of Truth": {
         "على مستوى الفرد\nIndividual Level": ["السكينة والاطمئنان (Inner Peace)", "استقلالية التفكير (Independent Thinking)", "الشجاعة الأخلاقية (Moral Courage)"],
         "على مستوى المجتمع\nSocietal Level": ["العدالة المطلقة (Absolute Justice)", "نهضة حضارية واعية (Conscious Civilization)", "تأسيس نظم غير قابلة للفساد (Incorruptible Systems)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Quran & Hadith", "Plato - The Republic", "Descartes - Meditations (1641)", "Kant - Critique of Pure Reason (1781)", "Karl Popper - Conjectures and Refutations (1963)"]
 }
 
 # ─── 2. Rich Professional Styling by Depth ─────────────────────

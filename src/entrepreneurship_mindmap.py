@@ -50,7 +50,8 @@ entrepreneurship_map = {
             "إيلون ماسك\nElon Musk": ["فشل 3 صواريخ SpaceX قبل النجاح", "التفكير من المبادئ الأولى", "هدف: جعل البشرية متعددة الكواكب"],
             "جيف بيزوس\nJeff Bezos": ["Day 1 Mentality - كل يوم هو اليوم الأول", "الهوس بالعميل (Customer Obsession)", "التفكير طويل المدى (Long-Term Thinking)"]
         }
-    }
+    },
+    "📚 المراجع\nReferences": ["Eric Ries - Lean Startup (2011)", "Peter Thiel - Zero to One (2014)", "Ben Horowitz - Hard Thing About Hard Things (2014)", "CB Insights - Startup Failure Report", "Y Combinator - Startup School"]
 }
 
 def dict_to_tree(name, data, depth=0):

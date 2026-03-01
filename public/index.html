@@ -309,6 +309,50 @@
             background: #66bb6a;
         }
 
+        .card[data-color="deepblue"]::before {
+            background: #1565c0;
+        }
+
+        .card[data-color="divinegold"]::before {
+            background: #d4af37;
+        }
+
+        .card[data-color="darkteal"]::before {
+            background: #00897b;
+        }
+
+        .card[data-color="moneygreen"]::before {
+            background: #4caf50;
+        }
+
+        .card[data-color="lawblue"]::before {
+            background: #5c6bc0;
+        }
+
+        .card[data-color="hotpink"]::before {
+            background: #e91e63;
+        }
+
+        .card[data-color="sunyellow"]::before {
+            background: #fdd835;
+        }
+
+        .card[data-color="fieldgreen"]::before {
+            background: #8bc34a;
+        }
+
+        .card[data-color="shadow"]::before {
+            background: #78909c;
+        }
+
+        .card[data-color="earthbrown"]::before {
+            background: #8d6e63;
+        }
+
+        .card[data-color="artpurple"]::before {
+            background: #ab47bc;
+        }
+
         .card[data-color="gold"] .icon {
             color: #ffd700;
             text-shadow: 0 0 15px rgba(245, 200, 66, 0.3);
@@ -404,6 +448,61 @@
             text-shadow: 0 0 15px rgba(102, 187, 106, 0.3);
         }
 
+        .card[data-color="deepblue"] .icon {
+            color: #42a5f5;
+            text-shadow: 0 0 15px rgba(66, 165, 245, 0.3);
+        }
+
+        .card[data-color="divinegold"] .icon {
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .card[data-color="darkteal"] .icon {
+            color: #4db6ac;
+            text-shadow: 0 0 15px rgba(77, 182, 172, 0.3);
+        }
+
+        .card[data-color="moneygreen"] .icon {
+            color: #4caf50;
+            text-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+        }
+
+        .card[data-color="lawblue"] .icon {
+            color: #7986cb;
+            text-shadow: 0 0 15px rgba(121, 134, 203, 0.3);
+        }
+
+        .card[data-color="hotpink"] .icon {
+            color: #f48fb1;
+            text-shadow: 0 0 15px rgba(244, 143, 177, 0.3);
+        }
+
+        .card[data-color="sunyellow"] .icon {
+            color: #fdd835;
+            text-shadow: 0 0 15px rgba(253, 216, 53, 0.3);
+        }
+
+        .card[data-color="fieldgreen"] .icon {
+            color: #8bc34a;
+            text-shadow: 0 0 15px rgba(139, 195, 74, 0.3);
+        }
+
+        .card[data-color="shadow"] .icon {
+            color: #90a4ae;
+            text-shadow: 0 0 15px rgba(144, 164, 174, 0.3);
+        }
+
+        .card[data-color="earthbrown"] .icon {
+            color: #bcaaa4;
+            text-shadow: 0 0 15px rgba(188, 170, 164, 0.3);
+        }
+
+        .card[data-color="artpurple"] .icon {
+            color: #ce93d8;
+            text-shadow: 0 0 15px rgba(206, 147, 216, 0.3);
+        }
+
         footer {
             margin-top: auto;
             padding: 2rem;
@@ -434,16 +533,18 @@
         <p class="subtitle">استكشف عمق المعرفة البشرية عبر خرائط تفاعلية شاملة</p>
         <div class="stats">
             <div class="stat">
-                <div class="number">19</div>
-                <div class="label">خريطة ذهنية</div>
-            </div>
-            <div class="stat">
-                <div class="number">1000+</div>
-                <div class="label">عنصر معرفي</div>
-            </div>
-            <div class="stat">
-                <div class="number">10</div>
-                <div class="label">مجالات علمية</div>
+                <div class="stat">
+                    <div class="number">30</div>
+                    <div class="label">خريطة ذهنية</div>
+                </div>
+                <div class="stat">
+                    <div class="number">2000+</div>
+                    <div class="label">عنصر معرفي</div>
+                </div>
+                <div class="stat">
+                    <div class="number">13</div>
+                    <div class="label">مجال علمي</div>
+                </div>
             </div>
         </div>
     </header>
@@ -458,6 +559,8 @@
             <button class="filter-btn" data-filter="اقتصاد">💰 اقتصاد</button>
             <button class="filter-btn" data-filter="تاريخ">📜 تاريخ</button>
             <button class="filter-btn" data-filter="صحة">💊 صحة</button>
+            <button class="filter-btn" data-filter="ثقافة">🎭 ثقافة</button>
+            <button class="filter-btn" data-filter="قانون">⚖️ قانون</button>
         </div>
     </div>
 
@@ -595,10 +698,87 @@
             <p>الخلية والحمض النووي والتطور وجسم الإنسان والميكروبيوم.</p>
             <span class="btn">استكشف</span>
         </a>
+        <a href="mathematics_mindmap.html" class="card" data-color="deepblue" data-category="علوم"
+            data-title="الرياضيات" target="_blank">
+            <span class="icon">📐</span>
+            <h2>الرياضيات</h2>
+            <p>الجبر والهندسة والتفاضل والتكامل والإحصاء.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="religion_mindmap.html" class="card" data-color="divinegold" data-category="ثقافة"
+            data-title="الأديان والعقائد" target="_blank">
+            <span class="icon">🕌</span>
+            <h2>الأديان والعقائد</h2>
+            <p>الإسلام والمسيحية واليهودية والبوذية والهندوسية ومقارنة الأديان.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="languages_mindmap.html" class="card" data-color="darkteal" data-category="ثقافة"
+            data-title="اللغات والتواصل" target="_blank">
+            <span class="icon">🗣️</span>
+            <h2>اللغات والتواصل</h2>
+            <p>اللسانيات وتعلم اللغات والبلاغة العربية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="personal_finance_mindmap.html" class="card" data-color="moneygreen" data-category="اقتصاد"
+            data-title="المالية الشخصية" target="_blank">
+            <span class="icon">💵</span>
+            <h2>المالية الشخصية</h2>
+            <p>الميزانية والاستثمار وحركة FIRE والفائدة المركبة.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="law_mindmap.html" class="card" data-color="lawblue" data-category="قانون" data-title="القانون والحقوق"
+            target="_blank">
+            <span class="icon">⚖️</span>
+            <h2>القانون والحقوق</h2>
+            <p>أنظمة القانون والقانون الدولي وحقوق الإنسان.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="media_propaganda_mindmap.html" class="card" data-color="hotpink" data-category="ثقافة"
+            data-title="الإعلام والبروباغندا" target="_blank">
+            <span class="icon">📺</span>
+            <h2>الإعلام والبروباغندا</h2>
+            <p>تقنيات التلاعب والأخبار المزيفة واقتصاد الانتباه.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="energy_climate_mindmap.html" class="card" data-color="sunyellow" data-category="علوم"
+            data-title="الطاقة والمناخ" target="_blank">
+            <span class="icon">⚡</span>
+            <h2>الطاقة والمناخ</h2>
+            <p>النفط والطاقة المتجددة وتغير المناخ واتفاقية باريس.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="food_agriculture_mindmap.html" class="card" data-color="fieldgreen" data-category="صحة"
+            data-title="الغذاء والزراعة" target="_blank">
+            <span class="icon">🌾</span>
+            <h2>الغذاء والزراعة</h2>
+            <p>الأمن الغذائي والزراعة المستقبلية والكائنات المعدلة.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="conspiracy_analysis_mindmap.html" class="card" data-color="shadow" data-category="فلسفة"
+            data-title="نظريات المؤامرة" target="_blank">
+            <span class="icon">🔍</span>
+            <h2>نظريات المؤامرة: تحليل</h2>
+            <p>تحليل علمي محايد: هبوط القمر، الأرض المسطحة، ومؤامرات حقيقية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="influence_persuasion_mindmap.html" class="card" data-color="earthbrown" data-category="ثقافة"
+            data-title="فن التأثير والإقناع" target="_blank">
+            <span class="icon">🎯</span>
+            <h2>فن التأثير والإقناع</h2>
+            <p>مبادئ تشالديني الستة ولغة الجسد وفن التفاوض.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="art_creativity_mindmap.html" class="card" data-color="artpurple" data-category="ثقافة"
+            data-title="الفن والإبداع" target="_blank">
+            <span class="icon">🎨</span>
+            <h2>الفن والإبداع</h2>
+            <p>تاريخ الفن ونظرية الألوان وتقنيات الإبداع والموسيقى.</p>
+            <span class="btn">استكشف</span>
+        </a>
     </div>
 
     <footer>
-        <p>تم الإنشاء بواسطة بايثون (Pyecharts) ✦ 19 خريطة تفاعلية ✦ واجهة تفاعلية</p>
+        <p>تم الإنشاء بواسطة بايثون (Pyecharts) ✦ 30 خريطة تفاعلية ✦ موسوعة معرفية شاملة</p>
     </footer>
 
     <script>

@@ -48,7 +48,8 @@ economy_map = {
             "أزمة 2008\nSubprime Crisis": ["الرهون العقارية عالية المخاطر (Subprime Mortgages)", "المشتقات المالية المعقدة (CDOs, CDS)", "سقوط Lehman Brothers", "الإنقاذ الحكومي - 700 مليار دولار (TARP)"]
         },
         "أدوات التحكم الخفية\nHidden Control Tools": ["التضخم كضريبة خفية (Inflation as Hidden Tax)", "فخ الديون الاستهلاكية (Consumer Debt Trap)", "درجة الائتمان كأداة تحكم (Credit Score Control)", "النظام الضريبي المعقد (Complex Tax System)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Adam Smith - Wealth of Nations (1776)", "Keynes - General Theory (1936)", "Satoshi Nakamoto - Bitcoin Whitepaper (2008)", "Ray Dalio - Changing World Order (2021)"]
 }
 
 def dict_to_tree(name, data, depth=0):

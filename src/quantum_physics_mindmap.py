@@ -34,6 +34,7 @@ quantum_map = {
         "التشفير الكمي\nQuantum Cryptography": ["توزيع المفاتيح الكمية QKD", "أي تنصت = كشف فوري", "تهديد التشفير الكلاسيكي (Post-Quantum Crypto)"],
         "تطبيقات أخرى\nOther Applications": ["أجهزة استشعار فائقة الدقة (Quantum Sensors)", "محاكاة الجزيئات لاكتشاف الأدوية", "الإنترنت الكمي (Quantum Internet)", "الساعات الذرية (Atomic Clocks)"]
     }
+    "📚 المراجع\nReferences": ["Richard Feynman - QED: The Strange Theory of Light (1985)", "Brian Greene - The Elegant Universe (1999)", "Carlo Rovelli - Seven Brief Lessons on Physics (2014)", "Nobel Prize 2022 - Aspect, Clauser, Zeilinger", "Sean Carroll - Something Deeply Hidden (2019)"],
 }
 
 def dict_to_tree(name, data, depth=0):

@@ -46,7 +46,8 @@ cybersecurity_map = {
             "الاتصال المشفر\nEncrypted Communication": ["Signal - الأكثر أماناً (E2E Encryption)", "ProtonMail - بريد مشفر", "Matrix/Element - دردشة لامركزية"]
         },
         "تهديدات الخصوصية\nPrivacy Threats": ["ملفات تعريف الارتباط (Tracking Cookies)", "بصمة المتصفح (Browser Fingerprinting)", "تسريبات البيانات الضخمة (Data Breaches)", "الرقابة الحكومية (Government Surveillance)", "جمع البيانات من التطبيقات المجانية"]
-    }
+    },
+    "📚 المراجع\nReferences": ["NIST Cybersecurity Framework", "OWASP Top 10 (2021)", "Bruce Schneier - Applied Cryptography (1996)", "Kevin Mitnick - Art of Deception (2002)", "MITRE ATT&CK Framework"]
 }
 
 def dict_to_tree(name, data, depth=0):

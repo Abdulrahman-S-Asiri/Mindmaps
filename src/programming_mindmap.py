@@ -42,6 +42,7 @@ programming_map = {
         "هندسة البيانات\nData Engineering": ["ETL Pipelines", "Apache Spark / Kafka", "Data Warehousing (Snowflake)", "dbt - تحويل البيانات"],
         "DevOps / SRE": ["البنية كرمز (Infrastructure as Code - Terraform)", "المراقبة (Monitoring - Prometheus, Grafana)", "الأمان في DevOps (DevSecOps)", "SLA / SLO / SLI"]
     }
+    "📚 المراجع\nReferences": ["CLRS - Introduction to Algorithms (2009)", "Clean Code - Robert C. Martin (2008)", "The Pragmatic Programmer - Hunt & Thomas (1999)", "MDN Web Docs - Mozilla", "freeCodeCamp / The Odin Project"],
 }
 
 def dict_to_tree(name, data, depth=0):

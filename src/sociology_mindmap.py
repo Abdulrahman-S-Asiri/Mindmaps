@@ -26,7 +26,8 @@ sociology_map = {
         "الأسرة\nFamily": ["النووية vs الممتدة", "تأثير الطلاق", "أدوار الجنسين المتغيرة"],
         "التعليم\nEducation": ["التعليم كتحرر أو سيطرة", "المنهج الخفي (Hidden Curriculum)", "إعادة إنتاج الطبقية"],
         "الدين\nReligion": ["دوركهايم: لاصق اجتماعي", "ماركس: أفيون الشعوب", "فيبر: محرك للتغيير"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Ibn Khaldun - Al-Muqaddimah (1377)", "Emile Durkheim - Suicide (1897)", "Max Weber - Economy and Society (1922)", "Bourdieu - Distinction (1979)"]
 }
 
 def dict_to_tree(name, data, depth=0):

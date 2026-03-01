@@ -59,7 +59,8 @@ civilizations_map = {
             "الإمبراطورية\nEmpire": ["يوليوس قيصر - نهاية الجمهورية (Julius Caesar)", "أغسطس - أول إمبراطور (Augustus)", "Pax Romana - 200 سنة سلام", "سقوط روما الغربية 476م"],
             "أسباب السقوط\nReasons for Fall": ["الانحلال الأخلاقي والترف", "الغزوات البربرية (Barbarian Invasions)", "التضخم وانهيار العملة", "الانقسام بين شرق وغرب"]
         }
-    }
+    },
+    "📚 المراجع\nReferences": ["Ibn Khaldun - Al-Muqaddimah (1377)", "Will Durant - Story of Civilization", "Arnold Toynbee - A Study of History", "Edward Gibbon - Decline and Fall of the Roman Empire (1776)"]
 }
 
 def dict_to_tree(name, data, depth=0):

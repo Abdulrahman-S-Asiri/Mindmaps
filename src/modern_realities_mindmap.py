@@ -36,7 +36,8 @@ modern_realities_map = {
             "المراتب الاجتماعية (Social Credit)": ["التحكم المالي الرقمي (CBDCs)", "المراقبة البيومترية (Biometric Surveillance)"]
         },
         "تسليم الإرادة (Surrendering Will)": ["الاعتماد الكلي على الذكاء الاصطناعي (Over-reliance on AI)", "فقدان المهارات البشرية الأساسية (Loss of Core Human Skills)"]
-    }
+    },
+    "📚 المراجع\nReferences": ["Yuval Harari - 21 Lessons (2018)", "Shoshana Zuboff - Surveillance Capitalism (2019)", "Noam Chomsky - Manufacturing Consent (1988)", "Jaron Lanier - Ten Arguments (2018)"]
 }
 
 # ─── 2. Rich Professional Styling by Depth ─────────────────────

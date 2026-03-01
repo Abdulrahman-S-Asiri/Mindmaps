@@ -37,6 +37,7 @@ philosophy_map = {
         "أدوات التفكير\nThinking Tools": ["شفرة أوكام (Occam's Razor)", "شفرة هانلون (Hanlon's Razor)", "الشك المنهجي (Systematic Doubt)", "الفولاذمان (Steelman) مقابل رجل القش (Strawman)"],
         "المغالطات المنطقية\nLogical Fallacies": ["الشخصنة (Ad Hominem)", "الاحتكام للسلطة (Appeal to Authority)", "المنحدر الزلق (Slippery Slope)", "ثنائية زائفة (False Dichotomy)", "الاحتكام للمشاعر (Appeal to Emotion)", "ما بعده إذن بسببه (Post Hoc)"]
     }
+    "📚 المراجع\nReferences": ["Plato - The Republic (380 BC)", "Aristotle - Nicomachean Ethics", "Rene Descartes - Meditations (1641)", "Friedrich Nietzsche - Thus Spoke Zarathustra (1883)", "Jean-Paul Sartre - Being and Nothingness (1943)", "Albert Camus - The Myth of Sisyphus (1942)"],
 }
 
 def dict_to_tree(name, data, depth=0):
