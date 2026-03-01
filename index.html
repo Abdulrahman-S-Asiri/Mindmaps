@@ -193,11 +193,72 @@
                 z-index: 50;
                 top: 0;
                 right: 0;
+                width: 100vw !important;
+                min-width: 100vw !important;
                 height: 100vh;
+                height: 100dvh;
             }
 
             .sidebar.open {
                 transform: translateX(0);
+            }
+
+            /* Bigger touch targets on mobile */
+            .nav-item {
+                padding: 14px 20px !important;
+                min-height: 60px;
+            }
+
+            .nav-item .text-sm {
+                font-size: 15px !important;
+            }
+
+            /* Welcome screen mobile */
+            .welcome-screen {
+                padding: 1.5rem !important;
+                overflow-y: auto;
+            }
+
+            .welcome-screen h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .welcome-screen .text-lg {
+                font-size: 0.95rem !important;
+            }
+
+            .welcome-screen .text-7xl {
+                font-size: 3.5rem !important;
+            }
+
+            .welcome-screen .w-32 {
+                width: 6rem !important;
+                height: 6rem !important;
+            }
+
+            /* Grid cols on small screens */
+            .welcome-screen .grid-cols-3 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* Hide desktop breadcrumb bar on mobile home */
+            .topbar-desktop {
+                display: none;
+            }
+
+            /* Sidebar close button */
+            .sidebar-close {
+                display: flex !important;
+            }
+
+            /* Hide particles on mobile for performance */
+            .particle {
+                display: none;
+            }
+
+            /* Back button bar on mobile when map is open */
+            .mobile-back-bar {
+                display: flex !important;
             }
         }
 
@@ -279,13 +340,39 @@
     <!-- Mobile Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
-    <!-- Top Bar (Mobile) -->
-    <div
+    <!-- Top Bar (Mobile) - Home state -->
+    <div id="mobileTopBar"
         class="md:hidden fixed top-0 left-0 right-0 z-30 bg-dark-800/90 backdrop-blur-lg border-b border-white/5 px-4 py-3 flex items-center justify-between">
         <span class="text-lg font-bold bg-gradient-to-l from-cyan-400 to-purple-400 bg-clip-text text-transparent">🧠
             الموسوعة</span>
-        <button onclick="toggleSidebar()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition">
+        <button onclick="toggleSidebar()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+            aria-label="القائمة">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Back Bar - Map viewing state -->
+    <div id="mobileBackBar"
+        class="mobile-back-bar hidden md:hidden fixed top-0 left-0 right-0 z-30 bg-dark-800/95 backdrop-blur-lg border-b border-white/5 px-3 py-2.5 items-center gap-3">
+        <button onclick="goHome()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition flex-shrink-0"
+            aria-label="رجوع">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5-5-5M18 12H4" />
+            </svg>
+        </button>
+        <span id="mobileMapTitle" class="text-sm font-bold text-white truncate flex-1"></span>
+        <button onclick="openFullscreen()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition flex-shrink-0"
+            aria-label="ملء الشاشة">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+        </button>
+        <button onclick="toggleSidebar()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition flex-shrink-0"
+            aria-label="القائمة">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
@@ -295,8 +382,20 @@
 
         <!-- ===== SIDEBAR ===== -->
         <aside
-            class="sidebar w-[320px] min-w-[320px] bg-dark-800/80 backdrop-blur-xl border-l border-white/5 flex flex-col transition-transform duration-300"
+            class="sidebar w-[320px] min-w-[320px] bg-dark-800/95 backdrop-blur-xl border-l border-white/5 flex flex-col transition-transform duration-300"
             id="sidebar">
+
+            <!-- Mobile Close Button -->
+            <div class="sidebar-close hidden items-center justify-between p-4 border-b border-white/5">
+                <span class="text-base font-bold text-white">📋 القائمة</span>
+                <button onclick="toggleSidebar()" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                    aria-label="إغلاق">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
             <!-- Logo Section -->
             <div class="p-5 border-b border-white/5">
@@ -746,9 +845,13 @@
                             <div class="text-xs text-gray-500">3 حقائق خفية</div>
                         </div>
                     </div>
-                    <p class="text-[11px] text-gray-600 mt-8">⌨️ اضغط <kbd
+                    <p class="text-[11px] text-gray-600 mt-8 hidden md:block">⌨️ اضغط <kbd
                             class="px-2 py-0.5 rounded bg-white/10 text-gray-400 text-[10px]">Ctrl+K</kbd> للبحث السريع
                     </p>
+                    <button onclick="toggleSidebar()"
+                        class="md:hidden mt-6 px-8 py-3 rounded-2xl bg-gradient-to-l from-cyan-500 to-purple-600 text-white font-bold text-base shadow-lg shadow-cyan-500/20 active:scale-95 transition">
+                        📋 اختر خريطة
+                    </button>
                 </div>
 
                 <!-- Loading -->
@@ -778,8 +881,19 @@
         const homeBtn = document.getElementById('homeBtn');
         const searchInput = document.getElementById('searchInput');
 
-        // Load a mindmap into iframe
+        const isMobile = () => window.innerWidth < 768;
+        const mobileTopBar = document.getElementById('mobileTopBar');
+        const mobileBackBar = document.getElementById('mobileBackBar');
+        const mobileMapTitle = document.getElementById('mobileMapTitle');
+
+        // Load a mindmap into iframe (or new tab on mobile)
         function loadMap(src, title) {
+            // On mobile, open in new tab for better touch/zoom UX
+            if (isMobile()) {
+                window.open(src, '_blank');
+                return;
+            }
+
             welcome.classList.add('hidden');
             loading.classList.remove('hidden');
             frame.classList.remove('hidden');
@@ -792,6 +906,14 @@
             `;
             fullscreenBtn.classList.remove('hidden');
             homeBtn.classList.remove('hidden');
+
+            // Mobile: show back bar, hide home bar
+            if (mobileBackBar) {
+                mobileTopBar.classList.add('hidden');
+                mobileBackBar.classList.remove('hidden');
+                mobileBackBar.style.display = 'flex';
+                mobileMapTitle.textContent = title;
+            }
 
             frame.onload = () => {
                 loading.classList.add('hidden');
@@ -808,6 +930,13 @@
             fullscreenBtn.classList.add('hidden');
             homeBtn.classList.add('hidden');
             navItems.forEach(n => n.classList.remove('active'));
+
+            // Mobile: restore home top bar
+            if (mobileBackBar) {
+                mobileTopBar.classList.remove('hidden');
+                mobileBackBar.classList.add('hidden');
+                mobileBackBar.style.display = '';
+            }
         }
 
         // Open iframe in fullscreen
