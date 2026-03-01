@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسوعة الخرائط الذهنية | Mindmaps Encyclopedia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(245, 200, 66, 0.04), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 255, 204, 0.04), transparent 25%),
+                radial-gradient(circle at 50% 80%, rgba(255, 102, 178, 0.04), transparent 25%);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #fff, #a1a1aa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .stat .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Search & Filters */
+        .controls {
+            max-width: 900px;
+            width: 100%;
+            padding: 0 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.9rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Cairo';
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .search-box::placeholder {
+            color: var(--text-muted);
+        }
+
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-family: 'Cairo';
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1500px;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 2rem 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-top: auto;
+        }
+
+        .card:hover .btn {
+            background: white;
+            color: var(--bg-color);
+        }
+
+        .card.hidden {
+            display: none !important;
+        }
+
+        /* Theme colors for each card */
+        .card[data-color="gold"]::before {
+            background: #ffd700;
+        }
+
+        .card[data-color="cyan"]::before {
+            background: #00ffcc;
+        }
+
+        .card[data-color="pink"]::before {
+            background: #ff66b2;
+        }
+
+        .card[data-color="red"]::before {
+            background: #ff4d4d;
+        }
+
+        .card[data-color="green"]::before {
+            background: #00e676;
+        }
+
+        .card[data-color="amber"]::before {
+            background: #ffc107;
+        }
+
+        .card[data-color="brown"]::before {
+            background: #8d6e63;
+        }
+
+        .card[data-color="blue"]::before {
+            background: #42a5f5;
+        }
+
+        .card[data-color="violet"]::before {
+            background: #b388ff;
+        }
+
+        .card[data-color="hacker"]::before {
+            background: #00ff41;
+        }
+
+        .card[data-color="orange"]::before {
+            background: #ff6d00;
+        }
+
+        .card[data-color="indigo"]::before {
+            background: #536dfe;
+        }
+
+        .card[data-color="magenta"]::before {
+            background: #e040fb;
+        }
+
+        .card[data-color="silver"]::before {
+            background: #b0bec5;
+        }
+
+        .card[data-color="teal"]::before {
+            background: #00bcd4;
+        }
+
+        .card[data-color="crimson"]::before {
+            background: #d32f2f;
+        }
+
+        .card[data-color="salmon"]::before {
+            background: #ffab91;
+        }
+
+        .card[data-color="steel"]::before {
+            background: #78909c;
+        }
+
+        .card[data-color="lime"]::before {
+            background: #66bb6a;
+        }
+
+        .card[data-color="gold"] .icon {
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(245, 200, 66, 0.3);
+        }
+
+        .card[data-color="cyan"] .icon {
+            color: #00ffcc;
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+        }
+
+        .card[data-color="pink"] .icon {
+            color: #ff66b2;
+            text-shadow: 0 0 15px rgba(255, 102, 178, 0.3);
+        }
+
+        .card[data-color="red"] .icon {
+            color: #ff4d4d;
+            text-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+        }
+
+        .card[data-color="green"] .icon {
+            color: #00e676;
+            text-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+        }
+
+        .card[data-color="amber"] .icon {
+            color: #ffc107;
+            text-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .card[data-color="brown"] .icon {
+            color: #bcaaa4;
+            text-shadow: 0 0 15px rgba(141, 110, 99, 0.3);
+        }
+
+        .card[data-color="blue"] .icon {
+            color: #42a5f5;
+            text-shadow: 0 0 15px rgba(66, 165, 245, 0.3);
+        }
+
+        .card[data-color="violet"] .icon {
+            color: #b388ff;
+            text-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
+        }
+
+        .card[data-color="hacker"] .icon {
+            color: #00ff41;
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+
+        .card[data-color="orange"] .icon {
+            color: #ff6d00;
+            text-shadow: 0 0 15px rgba(255, 109, 0, 0.3);
+        }
+
+        .card[data-color="indigo"] .icon {
+            color: #536dfe;
+            text-shadow: 0 0 15px rgba(83, 109, 254, 0.3);
+        }
+
+        .card[data-color="magenta"] .icon {
+            color: #e040fb;
+            text-shadow: 0 0 15px rgba(224, 64, 251, 0.3);
+        }
+
+        .card[data-color="silver"] .icon {
+            color: #b0bec5;
+            text-shadow: 0 0 15px rgba(176, 190, 197, 0.3);
+        }
+
+        .card[data-color="teal"] .icon {
+            color: #00bcd4;
+            text-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .card[data-color="crimson"] .icon {
+            color: #ef5350;
+            text-shadow: 0 0 15px rgba(239, 83, 80, 0.3);
+        }
+
+        .card[data-color="salmon"] .icon {
+            color: #ffab91;
+            text-shadow: 0 0 15px rgba(255, 171, 145, 0.3);
+        }
+
+        .card[data-color="steel"] .icon {
+            color: #78909c;
+            text-shadow: 0 0 15px rgba(120, 144, 156, 0.3);
+        }
+
+        .card[data-color="lime"] .icon {
+            color: #66bb6a;
+            text-shadow: 0 0 15px rgba(102, 187, 106, 0.3);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>موسوعة الخرائط الذهنية</h1>
+        <p class="subtitle">استكشف عمق المعرفة البشرية عبر خرائط تفاعلية شاملة</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="number">19</div>
+                <div class="label">خريطة ذهنية</div>
+            </div>
+            <div class="stat">
+                <div class="number">1000+</div>
+                <div class="label">عنصر معرفي</div>
+            </div>
+            <div class="stat">
+                <div class="number">10</div>
+                <div class="label">مجالات علمية</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="controls">
+        <input type="text" class="search-box" placeholder="🔍 ابحث في الخرائط..." id="searchInput">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="علوم">🔬 علوم</button>
+            <button class="filter-btn" data-filter="تقنية">💻 تقنية</button>
+            <button class="filter-btn" data-filter="فلسفة">🧠 فلسفة</button>
+            <button class="filter-btn" data-filter="اقتصاد">💰 اقتصاد</button>
+            <button class="filter-btn" data-filter="تاريخ">📜 تاريخ</button>
+            <button class="filter-btn" data-filter="صحة">💊 صحة</button>
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <a href="learning_ai_truth_mindmap.html" class="card" data-color="pink" data-category="تقنية"
+            data-title="أعماق الذكاء الاصطناعي" target="_blank">
+            <span class="icon">🌌</span>
+            <h2>أعماق الذكاء الاصطناعي</h2>
+            <p>خارطة الطريق الحقيقية لتعلم AI من رياضيات التأسيس إلى الحقيقة المرة في سوق العمل.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="absolute_truth_mindmap.html" class="card" data-color="gold" data-category="فلسفة"
+            data-title="الحقيقة المطلقة" target="_blank">
+            <span class="icon">⚖️</span>
+            <h2>الحقيقة المطلقة</h2>
+            <p>رحلة البحث عن الحقيقة المطلقة من المنطلقات الفلسفية والدينية والعلمية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="ai_mindmap_huge.html" class="card" data-color="cyan" data-category="تقنية"
+            data-title="منظومة الذكاء الاصطناعي" target="_blank">
+            <span class="icon">🤖</span>
+            <h2>منظومة الذكاء الاصطناعي</h2>
+            <p>الهيكل التنظيمي للذكاء الاصطناعي الحديث: الشركات، النماذج، والبنية التحتية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="modern_realities_mindmap.html" class="card" data-color="red" data-category="اقتصاد"
+            data-title="الماتريكس وحقائق العصر" target="_blank">
+            <span class="icon">🩸</span>
+            <h2>الماتريكس وحقائق العصر</h2>
+            <p>كشف الأوهام: حقيقة المال المطبوع، خوارزميات الإدمان، وصناعة الانتباه.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="psychology_mindmap.html" class="card" data-color="green" data-category="علوم"
+            data-title="علم النفس البشري" target="_blank">
+            <span class="icon">🧠</span>
+            <h2>علم النفس البشري</h2>
+            <p>فرويد ويونغ والذكاء العاطفي والصحة النفسية والوعي واللاوعي.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="economy_mindmap.html" class="card" data-color="amber" data-category="اقتصاد"
+            data-title="الاقتصاد الحقيقي" target="_blank">
+            <span class="icon">💰</span>
+            <h2>الاقتصاد الحقيقي</h2>
+            <p>من بريتون وودز إلى البيتكوين: نظريات، فقاعات، وأدوات التحكم المالي.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="civilizations_mindmap.html" class="card" data-color="brown" data-category="تاريخ"
+            data-title="تاريخ الحضارات" target="_blank">
+            <span class="icon">🏛️</span>
+            <h2>تاريخ الحضارات</h2>
+            <p>الحضارة الإسلامية واليونانية والصينية والمصرية والرومانية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="health_mindmap.html" class="card" data-color="blue" data-category="صحة" data-title="الصحة والجسد"
+            target="_blank">
+            <span class="icon">💊</span>
+            <h2>الصحة والجسد</h2>
+            <p>التغذية والنوم واللياقة وصناعة الأدوية والطب التكاملي.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="learning_philosophy_mindmap.html" class="card" data-color="violet" data-category="علوم"
+            data-title="فلسفة التعلم" target="_blank">
+            <span class="icon">📖</span>
+            <h2>فلسفة التعلم</h2>
+            <p>كيف يتعلم الدماغ، الاسترجاع النشط، وأوهام التعلم الشائعة.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="cybersecurity_mindmap.html" class="card" data-color="hacker" data-category="تقنية"
+            data-title="الأمن السيبراني" target="_blank">
+            <span class="icon">🔐</span>
+            <h2>الأمن السيبراني</h2>
+            <p>التشفير والهجمات الشهيرة والدفاع والخصوصية الرقمية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="entrepreneurship_mindmap.html" class="card" data-color="orange" data-category="اقتصاد"
+            data-title="ريادة الأعمال" target="_blank">
+            <span class="icon">🚀</span>
+            <h2>ريادة الأعمال</h2>
+            <p>من الفكرة إلى الطرح العام: التمويل والتسويق ودروس العظماء.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="space_mindmap.html" class="card" data-color="indigo" data-category="علوم"
+            data-title="علوم الكون والفضاء" target="_blank">
+            <span class="icon">🌌</span>
+            <h2>علوم الكون والفضاء</h2>
+            <p>النظام الشمسي والنجوم والثقوب السوداء والمادة المظلمة.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="quantum_physics_mindmap.html" class="card" data-color="magenta" data-category="علوم"
+            data-title="الفيزياء الكمية" target="_blank">
+            <span class="icon">⚛️</span>
+            <h2>الفيزياء الكمية</h2>
+            <p>التراكب الكمي والتشابك وقطة شرودنغر والحوسبة الكمية.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="philosophy_mindmap.html" class="card" data-color="silver" data-category="فلسفة"
+            data-title="الفلسفة العميقة" target="_blank">
+            <span class="icon">🏺</span>
+            <h2>الفلسفة العميقة</h2>
+            <p>من سقراط إلى سارتر: الميتافيزيقا والأخلاق والتفكير النقدي.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="programming_mindmap.html" class="card" data-color="teal" data-category="تقنية"
+            data-title="البرمجة من الصفر" target="_blank">
+            <span class="icon">💻</span>
+            <h2>البرمجة من الصفر</h2>
+            <p>هياكل البيانات والخوارزميات واللغات وتطوير الويب والمسارات.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="modern_history_mindmap.html" class="card" data-color="crimson" data-category="تاريخ"
+            data-title="التاريخ الحديث" target="_blank">
+            <span class="icon">⚔️</span>
+            <h2>التاريخ الحديث</h2>
+            <p>الحربان العالميتان والحرب الباردة والعالم المعاصر.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="sociology_mindmap.html" class="card" data-color="salmon" data-category="علوم" data-title="علم الاجتماع"
+            target="_blank">
+            <span class="icon">👥</span>
+            <h2>علم الاجتماع</h2>
+            <p>ابن خلدون ودوركهايم وماركس: النظريات والقضايا المعاصرة.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="geopolitics_mindmap.html" class="card" data-color="steel" data-category="تاريخ"
+            data-title="الجيوسياسة العالمية" target="_blank">
+            <span class="icon">🌍</span>
+            <h2>الجيوسياسة العالمية</h2>
+            <p>القوى العظمى والتحالفات والصراعات ومستقبل النظام العالمي.</p>
+            <span class="btn">استكشف</span>
+        </a>
+        <a href="biology_mindmap.html" class="card" data-color="lime" data-category="علوم" data-title="علم الأحياء"
+            target="_blank">
+            <span class="icon">🧬</span>
+            <h2>علم الأحياء</h2>
+            <p>الخلية والحمض النووي والتطور وجسم الإنسان والميكروبيوم.</p>
+            <span class="btn">استكشف</span>
+        </a>
+    </div>
+
+    <footer>
+        <p>تم الإنشاء بواسطة بايثون (Pyecharts) ✦ 19 خريطة تفاعلية ✦ واجهة تفاعلية</p>
+    </footer>
+
+    <script>
+        // Staggered animation
+        document.querySelectorAll('.card').forEach((card, i) => {
+            card.style.animationDelay = `${i * 0.08}s`;
+        });
+
+        // Search
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const q = this.value.toLowerCase();
+            document.querySelectorAll('.card').forEach(card => {
+                const title = card.dataset.title.toLowerCase();
+                const text = card.textContent.toLowerCase();
+                card.classList.toggle('hidden', !title.includes(q) && !text.includes(q));
+            });
+        });
+
+        // Filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.card').forEach(card => {
+                    card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
